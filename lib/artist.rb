@@ -27,7 +27,7 @@ end
 
 def print_songs
   @songs.each do |song_list|
-    puts song_list
+    puts song_list.name
     end
   end
 end
