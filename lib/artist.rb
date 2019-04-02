@@ -21,20 +21,21 @@ def self.all
   @@all
 end
 
-def self.find_or_create_by_name(artist_name)
-   artist_found = self.all.find {|artist| artist.name == artist_name}
-   if artist_found
-     artist_found
-   else
-     new_artist = self.new(artist_name)
-     new_artist.save
-     new_artist
-   end
- end
+def self.find_or_create_by_name(name)
+  self.find(name) ? self.find(name) : self.create(name)
+end
+
+def self.find(name)
+    self.all.find {|artist| artist.name == name }
+  end
+
+
+  def self.create(name)
+    self.new(name).tap {|artist| artist.save}
+  end
 
 def print_songs
-  @songs.each do |song|
-    puts song.name
+  @songs.each do {|song| puts song.name}
     end
   end
 end
