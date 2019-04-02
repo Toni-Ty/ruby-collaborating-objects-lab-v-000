@@ -26,7 +26,7 @@ def add_song(song)
 end
 
 def print_songs
-  @songs.each do { |song_list| self.name = song_list}
-    song_list
+  @songs.each do |song_list|
+    p song_list
 end
 end
