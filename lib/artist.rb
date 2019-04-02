@@ -25,6 +25,12 @@ def add_song(song)
   song
 end
 
+def print_songs
+  @songs
+end
+
+
+
 end
 
 
