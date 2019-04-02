@@ -17,3 +17,6 @@ end
 
 def artists=(name)
 end
+
+
+end
