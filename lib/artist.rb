@@ -29,6 +29,8 @@ def save
   @@all << self
 end
 
+def 
+
 def print_songs
   @songs.each do |song|
     puts song.name
