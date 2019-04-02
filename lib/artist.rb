@@ -17,7 +17,6 @@ def save
   @@all << self
 end
 
-
 def self.find_or_create_by_name(artist_name)
    artist_found = self.all.find {|artist| artist.name == artist_name}
    if artist_found
@@ -28,8 +27,6 @@ def self.find_or_create_by_name(artist_name)
      new_artist
    end
  end
-
-def
 
 def print_songs
   @songs.each do |song|
