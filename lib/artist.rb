@@ -29,3 +29,4 @@ def print_songs
   @songs.each do { |song_list| self.name = song_list}
     song_list
 end
+end
