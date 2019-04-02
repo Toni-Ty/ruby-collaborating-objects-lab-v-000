@@ -29,7 +29,7 @@ def save
   @@all << self
 end
 
-def 
+def
 
 def print_songs
   @songs.each do |song|
