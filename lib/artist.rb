@@ -1,37 +1,31 @@
-# class Artist
-#
-#
-# attr_accessor :name, :songs
-#   @@all = []
-#
-# def initialize(name)
-#   @name = name
-#   @songs = []
-# end
-#
-# # def self.find_or_create_by_name(name)
-# #   if (self.artist.nil?)
-# #       self.artist = Artist.new(name)
-# #   else
-# #       self.artist.name = name
-# #     end
-# #   end
-# # end
-#
-# def self.find_or_create_by_name(name)
-#     if self.find(name)
-#         self.find(name)
-#     else
-#         self.create(name)
-#   end
-# end
-#
-# def add_song(song)
-#   @songs >> song
-#   song
-# end
-#
-# end
+class Artist
+
+
+attr_accessor :name, :songs
+  @@all = []
+
+def initialize(name)
+  @name = name
+  @songs = []
+end
+
+def self.find_or_create_by_name(artist_name)
+  artist_found = self.all.find { |artist| artist.name = artist_name}
+  if artist_found
+    artist_found
+  else
+    new_artist = self.new(artist_name)
+    artist_name.save
+    new_artist  
+  end
+end
+
+def add_song(song)
+  @songs >> song
+  song
+end
+
+end
 
 
 class Artist
